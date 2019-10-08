@@ -1,0 +1,201 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+// href= https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet
+
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');    
+// <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+// <link href="" rel="stylesheet">
+
+
+table tr.highlight .mat-cell  {
+    // background-color: whitesmoke !important;
+    background-color: rgb(252, 136, 20) !important;
+    color: white  !important;
+}
+table tr.highlight .mat-list-item {
+    background-color: red !important;
+}
+table tr.highlight .mat-icon {
+    background-color: none !important;
+    color: whitesmoke  !important;
+}
+table td {
+      font-family: 'Arvo', serif;
+      font-weight: bolder !important;
+      color: rgb(3, 40, 99) !important;
+}
+table th, h1, h3, label  {
+  font-family: 'Lexend Deca', sans-serif;
+    color: rgb(3, 40, 99) !important;
+}
+.sidenav-icon i{
+    color : white;
+    align-items: center;
+}
+.example-radio-button {
+    margin-left: 89px;
+}
+
+.mat-elevation-z8 {
+    box-shadow: none;
+    width: 100% !important;
+}
+
+//icon-badge
+.mat-badge-medium.mat-badge-overlap.mat-badge-before .mat-badge-content  {
+      left: 50px;
+    top: 38px;
+}
+
+.mat-badge-warn .mat-badge-content  {
+       width: 18px;
+    height: 15px;
+    line-height: 16px;
+    border: 2px black solid;
+    // padding: -8px;
+    padding: 3px;
+    font-size: 14px;
+    background-color: white;
+    color: black; 
+}
+#icon .mat-icon {
+    color: rgb(245, 178, 10);
+    padding: 0px 0px 0px 10px !important;
+} 
+
+#table th, td{
+    text-align: start;
+}
+table tr {
+    align-content: center;
+}
+
+// .iconINrow {
+//          height: 0px !important; 
+// } 
+
+#showDataIcon {
+    background-color : yellow; 
+    font-size : 50px !important;
+    //  padding : 15px; 
+    // width: 100%;
+    // height: 100%;
+}
+
+  agm-map {
+      height: 345px;
+    }
+
+  
+
+
+  #viewMoreButton  {
+      margin: 25px 30px 0px 0px;
+       background-color : rgb(3, 40, 99) !important;
+    //    color :aqua;
+       color: rgb(202, 250, 248)
+  } 
+  .backButton {
+       margin: 25px 30px 20px 0px !important;
+       background-color : rgb(3, 40, 99) !important;
+    //    color :aqua;
+       color: rgb(202, 250, 248)
+  }
+
+//  box-shadow {
+//      0 3px 1px -2px rgba(0,0,0,.2), 
+//      0 2px 2px 0 rgba(0,0,0,.14), 
+//      0 1px 5px 0 rgba(0,0,0,.12)
+//  }
+.tableOverflow {
+    // width:  100%; 
+    height : 440px;  
+    overflow: scroll; 
+    overflow-x: hidden;
+     overflow-y: auto;
+}
+
+/* width */
+.tableOverflow::-webkit-scrollbar {
+  width: 5px;
+  overflow-x: hidden;
+     overflow-y: auto;
+}
+
+/* Track */
+.tableOverflow::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey; 
+  border-radius: 100%;
+    overflow-x: hidden;
+    //  overflow-y: auto;
+}
+ 
+/* Handle */
+.tableOverflow::-webkit-scrollbar-thumb {
+//   background: blue; 
+   background-color: rgb(3, 40, 99);
+  border-radius: 90%;
+    overflow-x: hidden;
+    //  overflow-y: auto;
+}
+
+/* Handle on hover */
+.tableOverflow::-webkit-scrollbar-thumb:hover {
+  background: #b30100; 
+}
+.dashboardRadioBTN .mat-radio-button {
+    padding-left: 40px; 
+}
+
+// .display {
+//     display: inline-block;
+// }
+// .display ul {
+//     display: inline-block;
+//     // text-decoration: none;
+//     // list-style-type: none;
+// }
+// .display ul li {
+//     text-decoration: none;
+//     list-style-type: none;
+//     display: inline-block;
+// }
+
+#zzz ul{
+    list-style-type: none !important;
+    padding-inline-start : 0px !important;
+}
+#zzz ul li{
+    padding: 5px;
+}
+#sam tr.mat-header-row{
+height: 0px !important;
+border-bottom: 0px !important;
+}
+#sam td.mat-cell:last-of-type {
+    width:100px;
+    padding: 0px !important;
+    background-color:  rgb(250, 252, 252); 
+
+}
+#sam td.mat-cell {
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+         border-bottom-style: none; 
+}
+// #sam table {
+//     border : none: 
+// }
+// #zz tr.mat-header-row {
+//     height: 0px !important;
+// td.mat-cell,
+// }
+
+.selected {
+   background-color: blue;
+}

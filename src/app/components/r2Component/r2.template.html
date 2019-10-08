@@ -1,0 +1,306 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " fxFlex="95" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " style="background-color: white;" fxFlex="29" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.sm="100" fxFlex.md="100" fxFlex.xs="100">
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div style="width:  100%;" class="tableOverflow">
+            <table mat-table [dataSource]="dataSource11" class="mat-elevation-z8">
+              <!-- <h3 *ngFor = "let api of dataSource.data"> {{ api.name }} </h3> -->
+              <!-- <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+   </ng-container> -->
+
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef> type </th>
+                <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer" (click)="getdata(element, i)"> {{element.type}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="number">
+                <th mat-header-cell *matHeaderCellDef> number </th>
+                <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer"> {{element.number}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="logo">
+                <th mat-header-cell *matHeaderCellDef> logo </th>
+                <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer"> {{element.logo}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="icon">
+                <th mat-header-cell *matHeaderCellDef> number </th>
+                <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer"> {{element.icon}} </td>
+              </ng-container>
+              <!-- 
+  <ng-container id="api" matColumnDef="policies" *ngFor="let column of [policies]" >
+    <th mat-header-cell *matHeaderCellDef> Policies. </th>
+    <td mat-cell *matCellDef="let element">
+  <ng-container *ngFor="let column of element.policies; let i2 = index">
+    <ul>
+     <li (click)="getdata(column)">{{column.type}}</li>
+     <li>{{column.number}}</li>
+     <li>{{column.logo}}</li>
+     <li>{{column.icon}}</li>
+    </ul>
+  </ng-container>
+    </td>
+  </ng-container> -->
+
+              <tr mat-header-row *matHeaderRowDef="dispalyedColumns11"></tr>
+              <tr mat-row *matRowDef="let row; let i = index; columns: dispalyedColumns11;"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column " style="background-color: white;" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.md="100" fxFlex.sm="100">
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <caption style="width : 100%">
+            <table mat-table [dataSource]="dataSource22" class="mat-elevation-z8">
+
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef> type </th>
+                <td mat-cell *matCellDef="let element"> {{ element.coverage.type }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> type </th>
+                <td mat-cell *matCellDef="let element"> {{ element.coverage.name }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="value">
+                <th mat-header-cell *matHeaderCellDef> value </th>
+                <td mat-cell *matCellDef="let element"> {{ element.coverage.value }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="basicExcess">
+                <th mat-header-cell *matHeaderCellDef> type </th>
+                <td mat-cell *matCellDef="let element"> {{ element.coverage.basicExcess }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="premium">
+                <th mat-header-cell *matHeaderCellDef> type </th>
+                <td mat-cell *matCellDef="let element"> {{ element.coverage.premium }} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns22"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns22;"></tr>
+            </table>
+          </caption>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayout="row wrap" style="margin-top : 80px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " style="background-color: white;" fxFlex="29" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.sm="100" fxFlex.md="100" fxFlex.xs="100">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div style="width:  100%;" class="tableOverflow">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Ankit Gupta </th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer"> {{element.name}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon> {{element.icon}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon2">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon> {{element.icon2}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon3">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon> {{element.icon3}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon4">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon> {{element.icon4}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="premium">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element"> {{element.premium}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; let i = index columns: displayedColumns;" (click)="highlightRow(row)" [ngClass]="{&apos;highlight&apos; : row.name == selectedName}" [ngStyle]="{&apos;background-color&apos;:nginit(row.name)}"></tr>
+        </table>
+
+        <br>
+        <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Ankit Gupta </th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer; color: red !important;"> {{element.name}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> </th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer"> {{element.id}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer">
+              <mat-icon> {{element.icon}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon2">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer">
+              <mat-icon> {{element.icon2}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon3">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer">
+              <mat-icon style="color: red"> {{element.icon3}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icon4">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer">
+              <mat-icon> {{element.icon4}} </mat-icon>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="premium">
+            <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> </th>
+            <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer"> {{element.premium}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns2;" (click)="highlightRow2(row)" [ngClass]="{&apos;highlight&apos; : row.name == selectedName2}"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column " style="background-color: white;" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.md="100" fxFlex.sm="100">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <caption *ngIf="notselected"> {{ title }}</caption>
+      <div style="width : 100%;">
+        <!-- {{ title }} -->
+        <div *ngIf="motorShow" style="padding-top : 0px !important">
+
+          <h1 style="margin : 0px; padding : 10px 0px 10px 20px; !important">
+            <span style="background-color : rgb(252, 136, 20); padding :4px 14px 0px 8px;">
+         <mat-icon style="font-size: .9em; color : white; ">directions_car</mat-icon>
+      </span>
+            <span> Motor  </span>
+          </h1>
+          <h3 style="padding: 0px 20px 0px 20px; ">Summary of Cover</h3>
+
+          <table mat-table [dataSource]="dataSource3" class="mat-elevation-z8" style="padding: 0px 20px 0px 20px; ">
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Section </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="item">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Insured Item </th>
+              <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Value </th>
+              <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="excess">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Basic Excess </th>
+              <td mat-cell *matCellDef="let element"> {{element.excess}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="premium">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Premium </th>
+              <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer"> {{element.premium}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+          </table>
+
+          <div fxLayoutAlign="end stretch" class="example-button-row">
+            <button mat-raised-button id="viewMoreButton" (click)="ViewMore()">View More &gt;&gt;</button>
+          </div>
+        </div>
+
+        <div *ngIf="liteShow">
+          <h1 style="margin : 0px; padding : 10px 0px 10px 20px; !important">
+            <span style="background-color : rgb(252, 136, 20); padding :4px 14px 0px 8px;">
+         <mat-icon style="font-size: .9em; color : white; ">favorite</mat-icon>
+      </span>
+            <span> Lite  </span>
+          </h1>
+          <h3 style="padding: 0px 20px 0px 20px; ">Summary of Cover</h3>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="padding: 0px 20px 0px 20px; ">
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Ankit Gupta </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="icon">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon> {{element.icon}} </mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="icon2">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon> {{element.icon2}} </mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="icon3">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon> {{element.icon3}} </mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="icon4">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"></th>
+              <td mat-cell *matCellDef="let element">
+                <mat-icon> {{element.icon4}} </mat-icon>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="premium">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> </th>
+              <td mat-cell *matCellDef="let element"> {{element.premium}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <div fxLayoutAlign="end stretch" class="example-button-row">
+            <button mat-raised-button id="viewMoreButton" style="margin: 20px 30px 30px 0px !important;" (click)="ViewMore()">View More &gt;&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

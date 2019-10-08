@@ -1,0 +1,44 @@
+<div fxLayout="row " style="background-color:rgb(237, 250, 249); height: 635px !important;" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " fxFlex="100" fxLayoutGap="1%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" style="height : 70px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" style="background-color: rgb(250, 252, 252); " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"></div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " style=" background-color : white;padding: 160px 0px 110px 0px;" fxFlex="95" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="90">
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="98">
+            <div fxFlex.xs="100">
+              <mat-form-field appearance="outline" style="width:100%;">
+                <mat-icon matPrefix required style="cursor: pointer" (click)="onSubmit()"> search </mat-icon>
+                <input matInput placeholder="Search For Customer : Enter {{ selectedBTN }}" [disabled]="radioForm.invalid" style="padding: 0px 0px 3px 4px;">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="80" fxFlex.sm="80" fxFlex.md="95">
+            <form (ngSubmit)="onSubmit()" [formGroup]="radioForm">
+              <mat-radio-group [(ngModel)]="selectRadio" formControlName="radioValid" required>
+                <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" style="padding-left : 10px;" fxFlex="16" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" *ngFor="let radio of radioBTN; let i = index;" fxFlex.xs="50" fxFlex.md="30">
+                    <div style="width : 100%;">
+                      <mat-radio-button [value]="radio" [checked]="radio.checked" name="select" (change)="radioChange(i , radio)">
+                        {{radio.test}}
+                      </mat-radio-button>
+
+                      <!-- <div *ngIf="isSubmitted && required">
+      <p>Please select either value</p>
+   </div> -->
+                    </div>
+                  </div>
+                </div>
+              </mat-radio-group>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

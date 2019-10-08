@@ -1,0 +1,59 @@
+<div fxLayout="row " fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" style=" " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-toolbar style="background: white; border: 2px solid rgb(240, 240, 240);  box-shadow: 10px 2px 2px 0px !important;">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100">
+        <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxLayout.lg="row" fxLayout.md="row">
+          <div fxLayout="row wrap" fxFlex="25" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100">
+            <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" style="cursor : pointer;" fxFlex="10" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="10" fxFlex.sm="10" fxFlex.md="15">
+                  <mat-icon style="padding-top :4px; " (click)="sidenav.toggle()">menu</mat-icon>
+                </div>
+                <div fxLayout="column wrap" fxFlex="90" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="90" fxFlex.sm="90" fxFlex.md="85">
+                  <h1>
+                    <h1 style="font-family: &apos;Abril Fatface&apos;; !important; font-weight: bolder; color: black  !important;"> LOGO </h1>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxFlex="75" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
+            <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="toggle.visible" fxHide.xs.print="true">
+              <form>
+                <mat-radio-group required>
+                  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="column wrap" style="padding-left : 10px;" fxFlex="15" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+                      <div class="dashboardRadioBTN">
+                        <mat-radio-button [value]="radio" [checked]="radio.checked" name="radio" *ngFor="let radio of radioBTN; let i = index;">
+                          {{radio.test}}
+                        </mat-radio-button>
+                      </div>
+                    </div>
+                  </div>
+                </mat-radio-group>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav style="background-color : rgb(41, 52, 107);" [mode]="&apos;push&apos;" [position]>
+    <mat-list style="padding-left : 10px; cursor: pointer;">
+      <mat-list-item *ngFor="let selectICON of showicon, let i = index," class="sidenav-icon ">
+        <div>
+          <md-button class="sidenav-icon">
+            <i class="material-icons" (click)="clickedICON(i)"> {{selectICON }} </i>
+          </md-button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-sidenav-container>

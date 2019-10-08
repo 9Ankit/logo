@@ -1,0 +1,164 @@
+<div fxLayout="row " style="background-color:rgb(242, 248, 252)" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " fxFlex="100" fxLayoutGap="1.5%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxLayoutGap.xs="3%">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " style="background-color: rgb(250, 252, 252); height: 100%;padding-top : 10px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column " fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+            <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" fxFlex="65" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="50" fxFlex.sm="43">
+                <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxFlex="18" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="47" fxFlex.md="27" fxFlex.sm="33">
+                    <div style="padding : 0px !important">
+                      <p id="icon" style="padding-top :5px; margin: 0px;">
+                        <mat-icon style="font-size:4em; padding: 0px" matBadge="12" matBadgePosition="below before" matBadgeColor="warn"> account_circle </mat-icon>
+                      </p>
+                    </div>
+                  </div>
+                  <div fxLayout="column wrap" fxFlex="82" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="53" fxFlex.md="73" fxFlex.sm="67"><label style="font-size : 22px; padding-top: 20px !important;"> Ankit Gupta</label></div>
+                </div>
+              </div>
+              <div fxLayout="column wrap" fxFlex="35" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="50" fxFlex.sm="57">
+                <div style="overflow: hidden">
+                  <table mat-table [dataSource]="dataSource4" class="mat-elevation-z8" id="sam">
+                    <ng-container matColumnDef="id" id="zz">
+                      <th mat-header-cell *matHeaderCellDef> </th>
+                      <td mat-cell *matCellDef="let element" id="zzz">
+                        <ul>
+                          <li> ID : {{element.id}} </li>
+                          <li> Policy Nr : {{element.policies[0].number}} </li>
+                          <li> Cell : {{element.personalDetails.phone}} </li>
+                          <li> Work Tel : {{element.personalDetails.landline}} </li>
+                          <li> Email : {{element.personalDetails.email}} </li>
+                        </ul>
+                      </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns4"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns4;"></tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column " fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+              <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="30">
+                <div fxLayout="row " style="wid" fxFlex="50" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="circle.png" style="height : 90px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="70">
+                <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="row wrap" style="border: 1px solid gray; margin-top : 0px !important;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><button mat-button style="background-color : white; border-radius: 0px !important;  border-right: 1px solid gray;">Refresh</button><button mat-button style="background-color : white;border-radius: 0px !important;  border-right: 1px solid gray;">Edit</button><button mat-button style="background-color : white;">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row " style="padding: 0px 20px 0px 20px;" fxLayoutGap="10px" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxLayout.xs="column">
+      <div fxLayout="column wrap" style="background-color: white;" fxFlex="30" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
+        <div>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef style="font-size : 18px; font-weight : bold;"> Ankit Gupta </th>
+              <td mat-cell *matCellDef="let element" (click)="openTabs(element.name)" style=" cursor: pointer" active> {{element.name}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; let i = index; columns: displayedColumns; " (click)="highlightRow(i)" [ngClass]="{&apos;highlight&apos; : i == selectedName}"></tr>
+          </table>
+        </div>
+      </div>
+      <div fxLayout="column wrap" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100">
+        <div *ngIf="titleShow"> {{ title }}</div>
+        <div *ngIf="car" style="height: 350px !important;  overflow-x: scroll;      overflow-y: scroll;" class="tableOverflow">
+          <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+
+            <ng-container matColumnDef="phone">
+              <th mat-header-cell *matHeaderCellDef> Phone </th>
+              <td mat-cell *matCellDef="let com"> {{ com.personalDetails.phone }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="landline">
+              <th mat-header-cell *matHeaderCellDef> Landline </th>
+              <td mat-cell *matCellDef="let com"> {{ com.personalDetails.landline }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email </th>
+              <td mat-cell *matCellDef="let com"> {{ com.personalDetails.email }} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+            <tr mat-row *matRowDef="let col; let i = index; columns: displayedColumns2;"></tr>
+          </table>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="policyNo">
+          <div style="width :100%;">
+            <table mat-table [dataSource]="dataSource3" class="mat-elevation-z8">
+
+              <ng-container matColumnDef="street">
+                <th mat-header-cell *matHeaderCellDef> Street </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.street }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="area">
+                <th mat-header-cell *matHeaderCellDef> Area </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.area }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="city">
+                <th mat-header-cell *matHeaderCellDef> City </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.city }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="state">
+                <th mat-header-cell *matHeaderCellDef> State </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.state }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> Country </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.country }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="pincode">
+                <th mat-header-cell *matHeaderCellDef> Pincode </th>
+                <td mat-cell *matCellDef="let com"> {{ com.personalDetails.address.pincode }} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+              <tr mat-row *matRowDef="let col; columns: displayedColumns3;"></tr>
+            </table>
+          </div>
+        </div>
+        <div *ngIf="Map">
+          <!-- <input type="text" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search> -->
+          <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="2" (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
+            <agm-marker *ngFor="let marker of markers;" [latitude]="marker.lat" [longitude]="marker.long" [markerDraggable]="true" (markerClick)="selectMarker($event)">
+            </agm-marker>
+
+          </agm-map>
+          <!-- <p *ngIf="selectedMarker">
+      Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
+    </p> -->
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" fxFlex="10" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="backButton" (click)="backButton()" type="button">&lt;&lt; Back</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

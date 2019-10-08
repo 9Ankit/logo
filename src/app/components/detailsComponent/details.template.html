@@ -1,0 +1,152 @@
+<div fxLayout="row wrap" style="background-color:rgb(242, 248, 252);" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " style="background-color: rgb(250, 252, 252); height: 100%;padding-top : 10px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column " fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100">
+              <div fxLayout="column " fxFlex="65" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="49" fxFlex.sm="45" fxFlex.md="55">
+                <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxFlex="19" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="52" fxFlex.md="35" fxFlex.sm="47">
+                    <div style="padding : 0px !important">
+                      <p id="icon" style="padding-top :5px; margin: 0px;">
+                        <mat-icon style="font-size:4em; padding: 0px" matBadge="12" matBadgePosition="below before" matBadgeColor="warn"> account_circle </mat-icon>
+                      </p>
+                    </div>
+                  </div>
+                  <div fxLayout="column wrap" fxFlex="81" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="48" fxFlex.md="65" fxFlex.sm="53"><label style="font-size : 22px; padding-top: 20px !important;"> Ankit Gupta</label></div>
+                </div>
+              </div>
+              <div fxLayout="column " fxFlex="35" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="51" fxFlex.sm="55" fxFlex.md="45">
+                <div>
+                  <table mat-table [dataSource]="dataSource4" class="mat-elevation-z8" id="sam">
+                    <ng-container matColumnDef="id" id="zz">
+                      <th mat-header-cell *matHeaderCellDef> </th>
+                      <td mat-cell *matCellDef="let element" id="zzz">
+                        <ul>
+                          <li> ID : {{element.id}} </li>
+                          <!-- <li> Policy Nr :  {{element.policies[0].number}}  </li> -->
+                          <li> Cell : {{element.personalDetails.phone}} </li>
+                          <li> Work Tel : {{element.personalDetails.landline}} </li>
+                          <li> Email : {{element.personalDetails.email}} </li>
+                        </ul>
+                      </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns4"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns4;"></tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column " fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.sm="100">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+              <div fxLayout="column " fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="25" fxFlex.sm="25">
+                <div fxLayout="row " style="wid" fxFlex="50" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column " fxFlex="60" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="circle.png" style="height : 90px;"></div>
+                  </div>
+                </div>
+              </div>
+              <div fxLayout="column " fxFlex="60" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="75" fxFlex.sm="75">
+                <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column " fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="row wrap" style="border: 1px solid gray; margin-top : 0px !important;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><button mat-button style="background-color : white; border-radius: 0px !important;  border-right: 1px solid gray;">Refresh</button><button mat-button style="background-color : white;border-radius: 0px !important;  border-right: 1px solid gray;">Edit</button><button mat-button style="background-color : white;">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                      </button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" style="background-color: white;" fxFlex="30" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.sm="100" fxFlex.md="100" fxFlex.xs="100">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div style="width:  100%;" class="tableOverflow">
+                <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8" id="sam">
+
+                  <ng-container matColumnDef="someName">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer; background-color: white"> {{element.someName}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element; let i = index" style="cursor : pointer" (click)="getdata(element, i)"> {{element.type}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="number">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="logo">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element"> {{element.logo}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="icon">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element" style="background-color: white"> {{element.icon}}
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="dispalyedColumns1"></tr>
+                  <tr mat-row *matRowDef="let row; let i = index; columns: dispalyedColumns1;" (click)="highlightRoww(i)" [ngClass]="{&apos;highlight&apos; : i==selectedIndex}"></tr>
+                  <tr mat-row *matRowDef="let row; columns: [&apos;someName&apos;]; when: isExtendedRow">
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" style="background-color: white; " fxFlex="69" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" fxFlex.md="100" fxFlex.sm="100">
+            <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div style="width : 100%">
+                <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+
+                  <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> Type </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.type }} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="value">
+                    <th mat-header-cell *matHeaderCellDef> Value </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.value }} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="basicExcess">
+                    <th mat-header-cell *matHeaderCellDef> Basic Excess </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.basicExcess }} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="premium">
+                    <th mat-header-cell *matHeaderCellDef> Premium </th>
+                    <td mat-cell *matCellDef="let element"> {{ element.premium }} </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+
+                </table>
+                <div fxLayoutAlign="end stretch" class="example-button-row">
+                  <button mat-raised-button id="viewMoreButton" style="margin: 20px 30px 30px 0px !important;" (click)="ViewMore()">View More &gt;&gt;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
