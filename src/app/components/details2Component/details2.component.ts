@@ -69,7 +69,7 @@ export class details2Component extends NBaseComponent implements OnInit {
     public highlightRow(i) {
         this.selectedName = i;
     }
-
+    policies  = [] ;
     cDetails() {
         this.dataSource4 = this.toggle.arraydata;
         console.log(this.toggle.arraydata);
